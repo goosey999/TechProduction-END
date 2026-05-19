@@ -13,6 +13,9 @@ public class DialogeManager : MonoBehaviour
 
     public TextMeshProUGUI DialogueText;
 
+    public GameObject Colin;
+    public GameObject Phillip;
+
     void Start()
     {
      //Debug.Log(dialogue.Length);  
@@ -23,6 +26,19 @@ public class DialogeManager : MonoBehaviour
     void Update()
     {
      DialogueText.text = dialogue[currentDialogue];
+
+     if (dialogue[currentDialogue].Contains("Colin"))
+        {
+            Debug.Log("Colin!");
+            Colin.SetActive(true);
+            Phillip.SetActive(false);
+            
+        } else if (dialogue[currentDialogue].Contains("Phillip:"))
+        {
+            Debug.Log ("Phillip!");
+            Colin.SetActive(false);
+            Phillip.SetActive(true);
+        }
     }
 
     public void NextDialogue()
