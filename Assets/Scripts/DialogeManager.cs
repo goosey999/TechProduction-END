@@ -18,8 +18,14 @@ public class DialogeManager : MonoBehaviour
 
     void Start()
     {
-     //Debug.Log(dialogue.Length);  
+        if(!PlayerPrefs.HasKey("currentDialogIndex"))
+        {
+             PlayerPrefs.SetInt("currentDialogIndex",currentDialogue);
+           
+        }
 
+
+        currentDialogue =  PlayerPrefs.GetInt("currentDialogIndex");
     }
 
     // Update is called once per frame
@@ -39,6 +45,8 @@ public class DialogeManager : MonoBehaviour
             Colin.SetActive(false);
             Phillip.SetActive(true);
         }
+
+    
     }
 
     public void NextDialogue()
@@ -46,12 +54,13 @@ public class DialogeManager : MonoBehaviour
         if (currentDialogue < dialogue.Length - 1)
         {
             currentDialogue += 1;
+            PlayerPrefs.SetInt("currentDialogIndex",currentDialogue + 1);
         } 
         
         if(currentDialogue > 4 && !mingamePlayed)
         {
             Debug.Log("Play Game");
-            //SceneManager.LoadScene(sceneName:"Card-Game");
+            SceneManager.LoadScene(sceneName:"Card-Game");
         }
     }
 }
