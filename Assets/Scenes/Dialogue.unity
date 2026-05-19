@@ -1362,6 +1362,10 @@ MonoBehaviour:
   - 'Colin looks down at his outfit and screams '
   - 'Phillip: Sir take a deep breath, Can you remember anything? '
   - Start Game
+  - 'Phillip: You were a clown stuck on an oil rig for two months???'
+  - 'Colin looks down dejectedly '
+  - 'Colin: yup'
+  - 'Phillip: Sir I believe you have a concussion  '
   currentDialogue: 0
   mingamePlayed: 0
   DialogueText: {fileID: 151758049}
