@@ -731,6 +731,9 @@ MonoBehaviour:
   EndImage: {fileID: 260346123}
   winSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
   loseSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  timerDisplay: {fileID: 0}
+  gameRunning: 0
+  timeRemaining: 0
 --- !u!4 &760613144
 Transform:
   m_ObjectHideFlags: 0
