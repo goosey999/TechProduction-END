@@ -32,7 +32,7 @@ public class DialogeManager : MonoBehaviour
             currentDialogue += 1;
         } 
         
-        if(currentDialogue >= 4 && !mingamePlayed)
+        if(currentDialogue > 4 && !mingamePlayed)
         {
             Debug.Log("Play Game");
             //SceneManager.LoadScene(sceneName:"Card-Game");
